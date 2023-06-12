@@ -13,7 +13,7 @@ node{
 	   sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
 	    }
-   stage('Build-Docker-Image'){
+  stage('Build-Docker-Image'){
         sh 'docker build -t subash211/maven-build .'
    }
    stage('Docker-Image-Push'){
@@ -34,7 +34,7 @@ node{
 		//  do nothing if there is an exception
 	}
    }
-   stage('Docker deployment'){
+    stage('Docker deployment'){
    sh 'docker run -d -p 8090:8080 --name tomcattest subash211/maven-build' 
    }
 }
