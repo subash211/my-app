@@ -23,9 +23,9 @@ node{
         sh 'docker push subash211/maven-build'
    }
    stage('Nexus Image Push'){
-        sh "docker login -u admin -p admin123 43.204.218.251:8083"
-        sh "docker tag subash211/maven-build 43.204.218.251:8083/subash:1.0.0"
-        sh 'docker push 43.204.218.251:8083/subash:1.0.0'
+        sh "docker login -u admin -p admin123 15.207.99.141:8083"
+        sh "docker tag subash211/maven-build 15.207.99.141:8083/subash:1.0.0"
+        sh 'docker push 15.207.99.141:8083/subash:1.0.0'
    }
    stage('Remove Previous Container'){
 	try{
