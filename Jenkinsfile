@@ -16,7 +16,7 @@ node{
   stage('Build-Docker-Image'){
         sh 'docker build -t subash211/maven-build .'
    }
-   stage('Docker-Image-Push'){
+	stage('Docker-Image-Push'){
         withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
         sh "docker login -u subash211 -p ${dockerPassword}"
     }
