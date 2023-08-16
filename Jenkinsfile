@@ -39,6 +39,3 @@ node{
    sh 'docker run -d -p 8000:8090 --name tomcattest subash211/maven-build' 
    }
 }
-
-
-
